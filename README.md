@@ -33,7 +33,7 @@ c. Removal of spaces between the handwritten words in each isolated horizontal s
 d. Generate text crops by segmenting into vertical intervals. 
 e. The preprocessing includes: gaussian filtering and OTSU thresholding to remove background noise, centering into a large blank canvas, inverting the images to have black background and grayscale foreground, and resizing the images to 170 x 242 pixels (Height x Width). 
 
-![] (step1_SimulateSignFromText.png)
+![](step1_SimulateSignFromText.png)
 
 However, the increased computational load needed for each training image through the FKD method led us to reduce the training set by sampling one text image for each canvas. Ultimately, about sixty thousand training and twenty-five thousand validation images are used for the training of S-T schemes. 
 
@@ -49,7 +49,7 @@ The neighboring relations within each FMt can be encoded by a Minimal Spanning T
 Using the neighborhood Mask, a measurable quantity of local affinity for each FM’s vector can be obtained with the Neighborhood Affinity Contrast (NAC). The NAC measures the ratio of the sum of square Euclidean distances of a sample to all its neighbors, to the sum of distances to all the other samples of the set.
 Also, the global feature Response representation is extracted from teacher CNN.
 
-![] ('step2/SupervisorySignals.png')
+![](step2/SupervisorySignals.png)
 
 The code for step 2 is implemented using MATLAB 2021a. 
 
