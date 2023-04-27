@@ -49,7 +49,7 @@ The neighboring relations within each FMt can be encoded by a Minimal Spanning T
 Using the neighborhood Mask, a measurable quantity of local affinity for each FM’s vector can be obtained with the Neighborhood Affinity Contrast (NAC). The NAC measures the ratio of the sum of square Euclidean distances of a sample to all its neighbors, to the sum of distances to all the other samples of the set.
 Also, the global feature Response representation is extracted from teacher CNN.
 
-![] (step2/SupervisorySignals.png)
+![] ('step2/SupervisorySignals.png')
 
 The code for step 2 is implemented using MATLAB 2021a. 
 
@@ -199,7 +199,7 @@ of one random split. Each item contains a dictionary with:
 
 Results from various trained student models are stored as pickle files in the ```sigver_WD/results``` folder. Two scripts are provided in the same folder to print the results (```print_Results_FromFile.py```) and perform statistical tests between the results obtained from different models (```statistical_tests.py```). 
 
-The results could be found here: ([link]())
+The results could be found here: [link]()
 
 
 # License
