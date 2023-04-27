@@ -37,7 +37,7 @@ e. The preprocessing includes: gaussian filtering and OTSU thresholding to remov
 
 However, the increased computational load needed for each training image through the FKD method led us to reduce the training set by sampling one text image for each canvas. Ultimately, about sixty thousand training and twenty-five thousand validation images are used for the training of S-T schemes. 
 
-The ```training_images``` could be found here [link](). 
+The ```training_images``` could be found here: [training_images](). 
 
 This database may be used for non-commercial research purpose only. If you publish material based on this database, we request you to include references [1] and [2].
 
@@ -53,7 +53,7 @@ Also, the global feature Response representation is extracted from teacher CNN.
 
 The code for step 2 is implemented using MATLAB 2021a. 
 
-The ```training_data``` can be found here [link]().
+The ```training_data``` can be found here: [link]().
 
 An example MATLAB script for loading training data is:
 ```
@@ -98,7 +98,7 @@ The overall loss function could be controlled within the function ```modelGradie
 
 Run ```step4_Load_Data_and_Train_CNNmodel.m```
 
-The final checkpoints for the trained models (```checkpoints_trained_student```) could be found here: [link]() 
+The final checkpoints for the trained models (```checkpoints_trained_student```) could be found here: [link](https://drive.google.com/drive/folders/1QoUJ5AOC0nfVIJrFr7Tt4ObdorEavW7p?usp=share_link) 
 
 ## Step 5: Trained CNN models
 
@@ -107,12 +107,12 @@ The models are saved in both mat-files (located in ```models/matModels```) and O
 
 The teacher model could be found here: 
 
-* SigNet - teacher (```base_model_feature_extractor_SigNet```): onnx ([link]())
+* SigNet - teacher (```base_model_feature_extractor_SigNet```): onnx ([link](https://drive.google.com/file/d/198E4sZVo4L5ugrS7qKuBgYK7CDXe1OIE/view?usp=share_link))
 
 The 9 trained models could be found here: 
 
 * SigNet with classification training, i.e., without KD <br />
-```SigNet_CL```: mat-file ([link]()) & onnx ([link]())
+```SigNet_CL```: mat-file ([link]()) & onnx ([link](https://drive.google.com/file/d/1TGiMavqcbqKuaEt6AvjiiUA7JwOYnK8w/view?usp=share_link))
 * ResNet18 with classification training, i.e., without KD <br />
 ```ResNet18_CL```: mat-file ([link]()) & onnx ([link]())
 * ResNet18 with classification training and KD using geometric regularization <br />
@@ -145,7 +145,7 @@ This step is a fork from https://github.com/luizgh/sigver with some functions ad
 
 This package requires python 3. Installation can be done with pip:
 
-```bash
+```
 pip install git+https://github.com/luizgh/sigver.git  --process-dependency-links
 ```
 
@@ -210,7 +210,7 @@ of one random split. Each item contains a dictionary with:
 
 Results from various trained student models are stored as pickle files in the ```sigver_WD/results``` folder. Two scripts are provided in the same folder to print the results (```print_Results_FromFile.py```) and perform statistical tests between the results obtained from different models (```statistical_tests.py```). 
 
-The results could be found here: [link]()
+The results could be found here: [link](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
 
 
 # License
