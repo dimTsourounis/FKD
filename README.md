@@ -83,7 +83,9 @@ Run ```step3_Design_SigResCNNmodel.m```
 The proposed S-T FKD scheme distils the knowledge via an offline approach, where the teacher is fixed, and the knowledge is transferred using both the feature maps of intermediate layers and the final features, to leverage the local and global information respectively.
 
 The overall multi-loss function of the S-T scheme is defined as: 
+
 ```L = a∙GeomL1 + b∙GeomL2 + c∙GeomL3 + d∙RespL + e∙classL```
+
 with the coefficients a,b,c,d,e representing the weights for each term that contributes to the overall loss. 
 
 * ```classL```: is the typical cross entropy classification loss in the writer identification task.
@@ -105,19 +107,24 @@ The models are saved in both mat-files (located in ```models/matModels```) and O
 
 The teacher model could be found here: 
 
-* SigNet - teacher ((```base_model_feature_extractor_SigNet```): onnx ([link]())
+* SigNet - teacher (```base_model_feature_extractor_SigNet```): onnx ([link]())
 
 The 9 trained models could be found here: 
 
-* SigNet with classification training, i.e., without KD (```SigNet_CL```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training, i.e., without KD (```ResNet18_CL```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using geometric regularization (```ResNet_CL_KD_GEOM```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with TCE (```ResNet_CL_KD_TCE```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with BT (```ResNet_CL_KD_BT```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with BC (```ResNet_CL_KD_BC```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using geometric regularization and response regularization with TCE (```ResNet_CL_KD_GEOM_TCE```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using geometric regularization and response regularization with BT (```ResNet_CL_KD_GEOM_BT```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using geometric regularization and response regularization with BC (```ResNet_CL_KD_GEOM_BC```): mat-file ([link]()) & onnx ([link]())
+* SigNet with classification training, i.e., without KD 
+(```SigNet_CL```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training, i.e., without KD
+(```ResNet18_CL```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using geometric regularization (```ResNet18_CL_KD_GEOM```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with TCE (```ResNet18_CL_KD_TCE```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with BT (```ResNet18_CL_KD_BT```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with BC (```ResNet18_CL_KD_BC```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using geometric regularization and response regularization with TCE 
+(```ResNet18_CL_KD_GEOM_TCE```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using geometric regularization and response regularization with BT 
+(```ResNet18_CL_KD_GEOM_BT```): mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using geometric regularization and response regularization with BC 
+(```ResNet18_CL_KD_GEOM_BC```): mat-file ([link]()) & onnx ([link]())
 
 
 See ```example.py``` for a complete example of how to use the onnx models to obtain features from a signature image using python.
