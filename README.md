@@ -8,6 +8,7 @@ In this work,the training in a S-T configuration is realized using text data tha
 
 The WD classifiers' stage originates from https://github.com/luizgh/sigver, which is the implementation of the SigNet approach described in [3]. Some modifications are made to process ONNX CNN models. 
 
+
 [1] Tsourounis, Dimitrios, Ilias Theodorakopoulos, Elias N. Zois, and George Economou. "From text to signatures: Knowledge transfer for efficient deep feature learning in offline signature verification." https://doi.org/10.1016/j.eswa.2021.116136 
 
 [2] Kleber, Florian, Stefan Fiel, Markus Diem, and Robert Sablatnig. "Cvl-database: An off-line database for writer retrieval, writer identification and word spotting." https://doi.org/10.1109/ICDAR.2013.117  
@@ -207,6 +208,10 @@ of one random split. Each item contains a dictionary with:
 Results from various trained student models are stored as pickle files in the ```sigver_WD/results``` folder. Two scripts are provided in the same folder to print the results (```print_Results_FromFile.py```) and perform statistical tests between the results obtained from different models (```statistical_tests.py```). 
 
 The results could be found here: [results](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
+
+# Citation
+
+If you use our code, please consider citing the following papers:
 
 
 # License
