@@ -37,7 +37,7 @@ e. The preprocessing includes: gaussian filtering and OTSU thresholding to remov
 
 However, the increased computational load needed for each training image through the FKD method led us to reduce the training set by sampling one text image for each canvas. Ultimately, about sixty thousand training and twenty-five thousand validation images are used for the training of S-T schemes. 
 
-The ```training_images``` could be found here: [training_images](). 
+The ```training_images``` could be found here: [training_images]() 
 
 This database may be used for non-commercial research purpose only. If you publish material based on this database, we request you to include references [1] and [2].
 
@@ -53,7 +53,7 @@ Also, the global feature Response representation is extracted from teacher CNN.
 
 The code for step 2 is implemented using MATLAB 2021a. 
 
-The ```training_data``` can be found here: [link]().
+The ```training_data``` can be found here: [training_data]()
 
 An example MATLAB script for loading training data is:
 ```
@@ -112,23 +112,23 @@ The teacher model could be found here:
 The 9 trained models could be found here: 
 
 * SigNet with classification training, i.e., without KD <br />
-```SigNet_CL```: mat-file ([link]()) & onnx ([link](https://drive.google.com/file/d/1TGiMavqcbqKuaEt6AvjiiUA7JwOYnK8w/view?usp=share_link))
+```SigNet_CL```: mat-file ([link](https://drive.google.com/file/d/16ADZ2XMOd0xxPu8-A3_id-IB7-XnDDZu/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1TGiMavqcbqKuaEt6AvjiiUA7JwOYnK8w/view?usp=share_link))
 * ResNet18 with classification training, i.e., without KD <br />
-```ResNet18_CL```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL```: mat-file ([link](https://drive.google.com/file/d/1BivMIWE-L56YnPOikA3aBB9Y8SLnF13h/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/13diayE8QN36TUNXDmF8W-l-mYTteWD13/view?usp=share_link))
 * ResNet18 with classification training and KD using geometric regularization <br />
-```ResNet18_CL_KD_GEOM```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM```: mat-file ([link](https://drive.google.com/file/d/1aTj_OXfpaSd-CvvwTphITwzBNkMuGiGk/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1owbbEqx38kx3bgPVB_wL5Bc6JBkteHtS/view?usp=share_link))
 * ResNet18 with classification training and KD using response regularization with TCE <br />
-```ResNet18_CL_KD_TCE```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_TCE```: mat-file ([link](https://drive.google.com/file/d/18ko6tsmu2-ULWLd5VuZ2O9A6yO01FJjS/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1D1KB5VOEuAt6En7f_-TYTSjhCJSobW_C/view?usp=share_link))
 * ResNet18 with classification training and KD using response regularization with BT <br />
-```ResNet18_CL_KD_BT```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_BT```: mat-file ([link]https://drive.google.com/file/d/1340mbu5wpETLBfqUSPRDZRT0ypEnzFH8/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1utTp4EeJxA15xo8H8O7zJE7FOEAPFXtb/view?usp=share_link))
 * ResNet18 with classification training and KD using response regularization with BC <br /> 
-```ResNet18_CL_KD_BC```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_BC```: mat-file ([link](https://drive.google.com/file/d/1rKFVkLCpcAMoTTdpwsxwdetft5jiQBr3/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/17GgVK318Vq9jPZE5JOtTRcV2tSMbyRno/view?usp=share_link))
 * ResNet18 with classification training and KD using geometric regularization and response regularization with TCE 
-```ResNet18_CL_KD_GEOM_TCE```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_TCE```: mat-file ([link](https://drive.google.com/file/d/1NscOrwutaPku8u8jIcEUEgbKWmXy9qA7/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/174o9mzlpvCsFpBrHHSrLoe4fHNpHRMPz/view?usp=share_link))
 * ResNet18 with classification training and KD using geometric regularization and response regularization with BT 
-```ResNet18_CL_KD_GEOM_BT```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_BT```: mat-file ([link](https://drive.google.com/file/d/1lAdrkpcB3Sma8kdlKeYfw3wiIOeXQVmQ/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1sGoRs9BLR19dWDuUAXmPwqMIVFpjdb9W/view?usp=share_link))
 * ResNet18 with classification training and KD using geometric regularization and response regularization with BC 
-```ResNet18_CL_KD_GEOM_BC```: mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_BC```: mat-file ([link](https://drive.google.com/file/d/1uOGQuVLcMo_pEAcDn6px1z7h3B6xCmYj/view?usp=share_link)) & onnx ([link](https://drive.google.com/file/d/1m-mBhZNs4v6f7dJtPwv5XMSZOKWyTsSJ/view?usp=share_link))
 
 
 See ```example.py``` for a complete example of how to use the onnx models to obtain features from a signature image using python.
@@ -143,13 +143,7 @@ This step is a fork from https://github.com/luizgh/sigver with some functions ad
 
 ### Installation
 
-This package requires python 3. Installation can be done with pip:
-
-```
-pip install git+https://github.com/luizgh/sigver.git  --process-dependency-links
-```
-
-You can also clone this repository and install it with ```pip install -e <path/to/repository>  --process-dependency-links```
+This package requires python 3. Installation can be done with pip.
 
 ### Data preprocessing
 
@@ -210,7 +204,7 @@ of one random split. Each item contains a dictionary with:
 
 Results from various trained student models are stored as pickle files in the ```sigver_WD/results``` folder. Two scripts are provided in the same folder to print the results (```print_Results_FromFile.py```) and perform statistical tests between the results obtained from different models (```statistical_tests.py```). 
 
-The results could be found here: [link](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
+The results could be found here: [results](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
 
 
 # License
