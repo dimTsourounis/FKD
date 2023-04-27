@@ -111,20 +111,24 @@ The teacher model could be found here:
 
 The 9 trained models could be found here: 
 
-* SigNet with classification training, i.e., without KD 
-(```SigNet_CL```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training, i.e., without KD
-(```ResNet18_CL```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using geometric regularization (```ResNet18_CL_KD_GEOM```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with TCE (```ResNet18_CL_KD_TCE```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with BT (```ResNet18_CL_KD_BT```): mat-file ([link]()) & onnx ([link]())
-* ResNet18 with classification training and KD using response regularization with BC (```ResNet18_CL_KD_BC```): mat-file ([link]()) & onnx ([link]())
+* SigNet with classification training, i.e., without KD <br />
+```SigNet_CL```: mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training, i.e., without KD <br />
+```ResNet18_CL```: mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using geometric regularization <br />
+```ResNet18_CL_KD_GEOM```: mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with TCE <br />
+```ResNet18_CL_KD_TCE```: mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with BT <br />
+```ResNet18_CL_KD_BT```: mat-file ([link]()) & onnx ([link]())
+* ResNet18 with classification training and KD using response regularization with BC <br /> 
+```ResNet18_CL_KD_BC```: mat-file ([link]()) & onnx ([link]())
 * ResNet18 with classification training and KD using geometric regularization and response regularization with TCE 
-(```ResNet18_CL_KD_GEOM_TCE```): mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_TCE```: mat-file ([link]()) & onnx ([link]())
 * ResNet18 with classification training and KD using geometric regularization and response regularization with BT 
-(```ResNet18_CL_KD_GEOM_BT```): mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_BT```: mat-file ([link]()) & onnx ([link]())
 * ResNet18 with classification training and KD using geometric regularization and response regularization with BC 
-(```ResNet18_CL_KD_GEOM_BC```): mat-file ([link]()) & onnx ([link]())
+```ResNet18_CL_KD_GEOM_BC```: mat-file ([link]()) & onnx ([link]())
 
 
 See ```example.py``` for a complete example of how to use the onnx models to obtain features from a signature image using python.
@@ -135,7 +139,7 @@ See ```example.m``` for a complete example of how to use the either mat or onnx 
 
 All procedures are executed inside the ```sigver_WD``` folder.
 
-This step is a fork from https://github.com/luizgh/sigver with some modifications to process ONNX CNN models.
+This step is a fork from https://github.com/luizgh/sigver with some functions added to process ONNX CNN models.
 
 ### Installation
 
