@@ -6,7 +6,7 @@ The code in this repository specifically focuses on the Offline Signature Verifi
 
 In this work,the training in a S-T configuration is realized using text data that work as information carrier to transfer the knowledge from the teacher into the student. The images of handwritten text are utilized because they possess a similar structure to signatures and most importantly, there is an abundance of data available from public sources. The text data are processed according to the procedure proposed by Tsourounis et al. in [1] to generate text images that resemble the distributions of signature images and use them as the training data of a CNN that solves a writer identification problem. The initial raw text data come from the publicly available CVL-database, where 310 writers fill in 5-10 lines of predefined text on page-forms [2].
 
-The WD classifiers' stage originates from https://github.com/luizgh/sigver, which is the implementation of the SigNet approach described in [3]. Some modifications are made to process ONNX CNN models. 
+The WD classifiers stage is based on the SigNet approach described in [3] and the implementation from https://github.com/luizgh/sigver. Some modifications were made enable processing of ONNX CNN models. 
 
 <br />
 
