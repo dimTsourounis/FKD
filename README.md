@@ -8,6 +8,7 @@ In this work,the training in a S-T configuration is realized using text data tha
 
 The WD classifiers' stage originates from https://github.com/luizgh/sigver, which is the implementation of the SigNet approach described in [3]. Some modifications are made to process ONNX CNN models. 
 
+<br />
 
 [1] Tsourounis, Dimitrios, Ilias Theodorakopoulos, Elias N. Zois, and George Economou. "From text to signatures: Knowledge transfer for efficient deep feature learning in offline signature verification." https://doi.org/10.1016/j.eswa.2021.116136 
 
@@ -105,6 +106,7 @@ The final checkpoints for the trained models (```checkpoints_trained_student```)
 
 Trained models for feature extraction could be found at folder ```models```. 
 The models are saved in both mat-files (located in ```models/matModels```) and ONNX format (located in ```models/onnxModels```).
+
 <br />
 
 The teacher model could be found here: 
