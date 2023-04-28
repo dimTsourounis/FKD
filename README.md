@@ -55,9 +55,9 @@ Also, the global feature Response representation is extracted from teacher CNN.
 
 The code for step 2 is implemented using MATLAB 2021a. 
 
-For each input image, the supervisory signals are: the writer ID, the neighborhood Masks, the NAC vectors, and the global feature Response. 
+For each input image, the supervisory signals are: the writer ID, the neighborhood Masks, the NAC vectors, and the global feature Response.
 
-The ```training_data``` can be found here: [training_data]()
+The ```training_data``` can be found here: [training_data](https://drive.google.com/drive/folders/13hmj7mjET-XnNifwtAcHXHNdKScmZRfP?usp=share_link)
 
 An example MATLAB script for loading training data is:
 ```
