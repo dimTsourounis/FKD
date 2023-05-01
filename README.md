@@ -39,7 +39,7 @@ e. The preprocessing includes: gaussian filtering and OTSU thresholding to remov
 
 However, the increased computational load needed for each training image through the FKD method led us to reduce the training set by sampling one text image for each canvas. Ultimately, about sixty thousand training and twenty-five thousand validation images are used for the training of S-T schemes. 
 
-The ```training_images``` could be found here: [training_images]() 
+The ```training_images``` could be found here: [training_images](https://drive.google.com/drive/folders/1h1dE3lmzy47_3jw9tPHH2WOQ0hVWscN0?usp=share_link) 
 
 This database may be used for non-commercial research purpose only. If you publish material based on this database, we request you to include references [1] and [2].
 
