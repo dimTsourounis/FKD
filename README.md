@@ -26,7 +26,7 @@ Python for WD classifiers
 
 ## Step 1: Training images
 
-The goal is to extract multiple image samples from each text form, which contains handwritten text. The initial raw text data come from the publicly available CVL-database, where 310 writers fill in 5-10 lines of predefined text on page-forms [2]. The extracted images should be in a format that can convey distinctive information of the writer’s handwriting style, without necessarily including full words. The detailed specially designed process to simulate signatures from  text data could be found in [1].  
+The goal is to extract multiple image samples from each text form, which contains handwritten text. The initial raw text data come from the publicly available CVL-database ([CVL-database](https://cvl.tuwien.ac.at/research/cvl-databases/an-off-line-database-for-writer-retrieval-writer-identification-and-word-spotting/)), where 310 writers fill in 5-10 lines of predefined text on page-forms [2]. The extracted images should be in a format that can convey distinctive information of the writer’s handwriting style, without necessarily including full words. The detailed specially designed process to simulate signatures from  text data could be found in [1].  
 
 In brief, in [1], the following procedures are applied: <br />
 a. Convert the text forms to grayscale. <br />
@@ -42,8 +42,6 @@ However, the increased computational load needed for each training image through
 The processed database with ```training_images``` could be found here: [training_images](https://drive.google.com/drive/folders/1h1dE3lmzy47_3jw9tPHH2WOQ0hVWscN0?usp=share_link) 
 
 <br />
-
-The used text database is CVL-database [2] [CVL-database](https://cvl.tuwien.ac.at/research/cvl-databases/an-off-line-database-for-writer-retrieval-writer-identification-and-word-spotting/) 
 
 The processed database that simulates signatures from text may be used for non-commercial research purpose only. If you publish material based on this database, we request you to include references [1] and [2].
 
