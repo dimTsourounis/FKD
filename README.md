@@ -41,7 +41,7 @@ However, the increased computational load needed for each training image through
 
 The processed database with ```training_images``` could be found here: [training_images](https://drive.google.com/drive/folders/1h1dE3lmzy47_3jw9tPHH2WOQ0hVWscN0?usp=share_link) 
 
-The used text database is CVL-database [2] (CVL-database)(https://cvl.tuwien.ac.at/research/cvl-databases/an-off-line-database-for-writer-retrieval-writer-identification-and-word-spotting/) 
+The used text database is CVL-database [2] [CVL-database](https://cvl.tuwien.ac.at/research/cvl-databases/an-off-line-database-for-writer-retrieval-writer-identification-and-word-spotting/) 
 
 The processed database that simulates signatures from text may be used for non-commercial research purpose only. If you publish material based on this database, we request you to include references [1] and [2].
 
