@@ -28,18 +28,20 @@ Python for WD classifiers
 
 The goal is to extract multiple image samples from each text form, which contains handwritten text. The initial raw text data come from the publicly available CVL-database, where 310 writers fill in 5-10 lines of predefined text on page-forms [2]. The extracted images should be in a format that can convey distinctive information of the writer’s handwriting style, without necessarily including full words. The detailed specially designed process to simulate signatures from  text data could be found in [1].  
 
-In brief, the following procedures are applied: 
-a. Convert the text forms to grayscale.
-b. Detect and extract horizontal stripes of text from the forms.
-c. Removal of spaces between the handwritten words in each isolated horizontal stripe.
-d. Generate text crops by segmenting into vertical intervals. 
-e. The preprocessing includes: gaussian filtering and OTSU thresholding to remove background noise, centering into a large blank canvas, inverting the images to have black background and grayscale foreground, and resizing the images to 170 x 242 pixels (Height x Width). 
+In brief, in [1], the following procedures are applied: <br />
+a. Convert the text forms to grayscale. <br />
+b. Detect and extract horizontal stripes of text from the forms. <br />
+c. Removal of spaces between the handwritten words in each isolated horizontal stripe. <br />
+d. Generate text crops by segmenting into vertical intervals. <br />
+e. The preprocessing includes: gaussian filtering and OTSU thresholding to remove background noise, centering into a large blank canvas, inverting the images to have black background and grayscale foreground, and resizing the images to 170 x 242 pixels (Height x Width). <br />
 
 ![](step1_SimulateSignFromText.png)
 
 However, the increased computational load needed for each training image through the FKD method led us to reduce the training set by sampling one text image for each canvas. Ultimately, about sixty thousand training and twenty-five thousand validation images are used for the training of S-T schemes. 
 
 The processed database with ```training_images``` could be found here: [training_images](https://drive.google.com/drive/folders/1h1dE3lmzy47_3jw9tPHH2WOQ0hVWscN0?usp=share_link) 
+
+<br />
 
 The used text database is CVL-database [2] [CVL-database](https://cvl.tuwien.ac.at/research/cvl-databases/an-off-line-database-for-writer-retrieval-writer-identification-and-word-spotting/) 
 
@@ -90,7 +92,7 @@ The proposed S-T FKD scheme distils the knowledge via an offline approach, where
 
 The overall multi-loss function of the S-T scheme is defined as: 
 
-```L = a∙GeomL1 + b∙GeomL2 + c∙GeomL3 + d∙RespL + e∙classL```
+```L = a∙GeomLa + b∙GeomLb + c∙GeomLc + d∙RespL + e∙classL```
 
 with the coefficients a,b,c,d,e representing the weights for each term that contributes to the overall loss. 
 
