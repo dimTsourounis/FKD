@@ -4,6 +4,7 @@
 
 %%
 clear;
+addpath(genpath('step2')); addpath(genpath('step3')); addpath(genpath('step4'));
 
 %% Load model in mat-file (checkpoint)
 
