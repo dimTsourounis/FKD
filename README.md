@@ -217,7 +217,7 @@ The results could be found here: [results](https://drive.google.com/drive/folder
 
 <br />
 
-# Appendix: Regarding the computation of NAC ratio for the Geometric Rgularization
+# Appendix: Regarding the computation of NAC ratio for the Geometric Regularization
 
 For clarification, a sample is a (channel-wise) vector of one feature map (FM) in a layer of a network. Given that the FM has size HxWxC (assuming that the batch size is one for simplicity), one sample is a vector with size Cx1. The set of samples is all the N (channel-wise) vectors of the feature map FM, where N=H*W.
 
@@ -246,10 +246,10 @@ b) for the student, using the same binary neighborhood mask but different featur
 
 ### Key variables at the code implementation for constructing the final training loss:
 
--The neighborhood masks and the NAC ratio vectors for teacher resulted from Find_Neighborhoods_n_Dists.m function (step2) and denoted as “MasksX” and “GT_NACsX” at the code where X referred to the corresponding layer.
--The NAC ratio vectors for student resulted from NACLayer.m function (step3-design and step4-execute) and denoted as “pred_NACX” at the code where X referred to the corresponding layer. 
--The response features resulted from the modelGradients_CE_NACs_featIM.m function (step4) and denoted as “GT_Features” for teacher and “pred_Feature” for student at the code. 
--The classification prediction resulted from the modelGradients_CE_NACs_featIM.m (step4) function and denoted as “pred_softmax_label” for the student at the code.
+* The neighborhood masks and the NAC ratio vectors for teacher resulted from Find_Neighborhoods_n_Dists.m function (step2) and denoted as “MasksX” and “GT_NACsX” at the code where X referred to the corresponding layer. <br />
+* The NAC ratio vectors for student resulted from NACLayer.m function (step3-design and step4-execute) and denoted as “pred_NACX” at the code where X referred to the corresponding layer. <br />
+* The response features resulted from the modelGradients_CE_NACs_featIM.m function (step4) and denoted as “GT_Features” for teacher and “pred_Feature” for student at the code. <br />
+* The classification prediction resulted from the modelGradients_CE_NACs_featIM.m (step4) function and denoted as “pred_softmax_label” for the student at the code. <br />
 
 Executing the modelGradients_CE_NACs_featIM.m function, the terms of overall loss function are denoted as “lossClassification”, “lossNAC1”, “lossNAC3”, “lossFeature”, while the weighted sum is the final overall loss of FKD training, denoted as “loss”.
 
