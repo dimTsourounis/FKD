@@ -215,6 +215,46 @@ Results from various trained student models are stored as pickle files in the ``
 
 The results could be found here: [results](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
 
+# Appendix 
+
+## Regarding the computation of NAC ration for the Geometric Rgularization
+
+``` ```
+For clarification, a sample is a (channel-wise) vector of one feature map (FM) in a layer of a network. Given that the FM has size HxWxC (assuming that the batch size is one for simplicity), one sample is a vector with size Cx1. The set of samples is all the N (channel-wise) vectors of the feature map FM, where N=H*W.
+
+The two key functions related to NAC method are ```Find_Neighborhoods_n_Dists.m``` (folder: step2>>MST) and ```NACLayer.m``` (folder: step3). 
+
+### Inputs and Outputs for these functions:
+
+The neighborhood mask is calculated using the function ```Find_Neighborhoods_n_Dists.m``` (folder: step2>>MST) that takes as inputs: a feature map (FM is size HxWxC) and a radius of neighborhood (that is the geodesic radius indicating the number of hops that define the neighbors of each node on the MST) & the outputs are: a binary neighborhood mask with size NxN and a ratio of size Nx1, where N=H*W.  
+
+By executing the ```Find_Neighborhoods_n_Dists.m``` function, the binary neighborhood mask results from the MST (Minimum Spanning Tree) -using the MexKruskMST3.mexw64 function- and the pairwise geodesic distances over the MST -calculated through the Dijkstra algorithm using the dijkstra.mexw64 function-. The binary neighborhood mask is constructed using a radius parameter that defines the neighboring nodes within the MST graph as those up to radius distance.
+
+Also, by executing the ```Find_Neighborhoods_n_Dists.m``` function, the ration is calculated using the output binary neighborhood mask as the sum of square Euclidean distances of a sample to all its neighbors, to the sum of distances to all the other samples of the set according to the neighbors indicating by the binary neighborhood mask. So, this ratio is simply the intra distance to inter distance ratio and named Neighborhood Affinity Contrast (NAC) ratio. 
+
+The function ```NACLayer.m``` (folder: step3) takes as inputs: the (channel-wise) vectors of a feature map (FM is size HxWxC) and the binary neighborhood mask with size NxN (N=H*W) & the output is: a NAC ratio with size Nx1, which is simply the sum of square Euclidean distances of a sample to all its neighbors, to the sum of distances to all the other samples of the set.  
+
+### Role of these functions in the overall concept of our FKD set up: 
+
+The ```Find_Neighborhoods_n_Dists.m``` function computes the binary neighborhood masks for all training images based on the intermediate representations (i.e., feature map) of the teacher model. Using these masks, it also calculates the NAC ratio vectors for all training images. As a result, for every training image, we obtain both the neighborhood mask and the corresponding NAC ratio vector for one intermediate layer of teacher model. When executed the function to different layers of teacher, multiple neighborhood masks and the corresponding NAC ratio vectors are calculated, related to different intermediate representations. (Our code implementation provides three intermediate representations in three layers but found that using two layers only offers optimal performance and thus, two distillation connections are designed in the reported S-T scheme).
+
+The ```NACLayer.m``` function computes the NAC ratio vectors for the student model using its own intermediate feature maps. However, it uses the neighborhood masks that were derived from the teacher’s representations.
+
+The goal of the geometrical loss is to encourage the student model’s intermediate representations to mimic the spatial neighborhood relations found in the teacher’s intermediate representations. This facilitates a form of distillation based on local geometric consistency between activations (i.e., intermediate representations) of teacher and student.
+Ultimately, NAC is the core of the geometrical regularization. It is computed in two places:
+a) for the teacher, serving as the ground truth signal, and
+b) for the student, using the same binary neighborhood mask but different feature maps
+
+### Key variables at the code implementation for constructing the final training loss:
+
+-The neighborhood masks and the NAC ratio vectors for teacher resulted from Find_Neighborhoods_n_Dists.m function (step2) and denoted as “MasksX” and “GT_NACsX” at the code where X referred to the corresponding layer.
+-The NAC ratio vectors for student resulted from NACLayer.m function (step3-design and step4-execute) and denoted as “pred_NACX” at the code where X referred to the corresponding layer. 
+-The response features resulted from the modelGradients_CE_NACs_featIM.m function (step4) and denoted as “GT_Features” for teacher and “pred_Feature” for student at the code. 
+-The classification prediction resulted from the modelGradients_CE_NACs_featIM.m (step4) function and denoted as “pred_softmax_label” for the student at the code.
+
+Executing the modelGradients_CE_NACs_featIM.m function, the terms of overall loss function are denoted as “lossClassification”, “lossNAC1”, “lossNAC3”, “lossFeature”, while the weighted sum is the final overall loss of FKD training, denoted as “loss”.
+
+
 # Citation
 
 If you use our code, please consider citing the following papers:
