@@ -237,12 +237,13 @@ The function ```NACLayer.m``` (folder: step3) takes as inputs: the (channel-wise
 
 The ```Find_Neighborhoods_n_Dists.m``` function computes the binary neighborhood masks for all training images based on the intermediate representations (i.e., feature map) of the teacher model. Using these masks, it also calculates the NAC ratio vectors for all training images. As a result, for every training image, we obtain both the neighborhood mask and the corresponding NAC ratio vector for one intermediate layer of teacher model. When executed the function to different layers of teacher, multiple neighborhood masks and the corresponding NAC ratio vectors are calculated, related to different intermediate representations. (Our code implementation provides three intermediate representations in three layers but found that using two layers only offers optimal performance and thus, two distillation connections are designed in the reported S-T scheme).
 
-The ```NACLayer.m``` function computes the NAC ratio vectors for the student model using its own intermediate feature maps. However, it uses the neighborhood masks that were derived from the teacher’s representations.
+The ```NACLayer.m``` function computes the NAC ratio vectors for the student model using its own intermediate feature maps. However, it uses the neighborhood masks that were derived from the teacher’s representations. <br />
 
-The goal of the geometrical loss is to encourage the student model’s intermediate representations to mimic the spatial neighborhood relations found in the teacher’s intermediate representations. This facilitates a form of distillation based on local geometric consistency between activations (i.e., intermediate representations) of teacher and student.
+The goal of the geometrical loss is to encourage the student model’s intermediate representations to mimic the spatial neighborhood relations found in the teacher’s intermediate representations. This facilitates a form of distillation based on local geometric consistency between activations (i.e., intermediate representations) of teacher and student. <br />
+
 Ultimately, NAC is the core of the geometrical regularization. It is computed in two places:
-a) for the teacher, serving as the ground truth signal, and
-b) for the student, using the same binary neighborhood mask but different feature maps
+a) for the teacher, serving as the ground truth signal, and <br />
+b) for the student, using the same binary neighborhood mask but different feature maps <br />
 
 ### Key variables at the code implementation for constructing the final training loss:
 
