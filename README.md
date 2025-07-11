@@ -215,11 +215,8 @@ Results from various trained student models are stored as pickle files in the ``
 
 The results could be found here: [results](https://drive.google.com/drive/folders/1Xm5NlKjQAzXCt1LkmEYbqA_Hd61YM_uT?usp=share_link)
 
-# Appendix 
+# Appendix: Regarding the computation of NAC ration for the Geometric Rgularization
 
-## Regarding the computation of NAC ration for the Geometric Rgularization
-
-``` ```
 For clarification, a sample is a (channel-wise) vector of one feature map (FM) in a layer of a network. Given that the FM has size HxWxC (assuming that the batch size is one for simplicity), one sample is a vector with size Cx1. The set of samples is all the N (channel-wise) vectors of the feature map FM, where N=H*W.
 
 The two key functions related to NAC method are ```Find_Neighborhoods_n_Dists.m``` (folder: step2>>MST) and ```NACLayer.m``` (folder: step3). 
