@@ -241,7 +241,7 @@ The ```NACLayer.m``` function computes the NAC ratio vectors for the student mod
 
 The goal of the geometrical loss is to encourage the student model’s intermediate representations to mimic the spatial neighborhood relations found in the teacher’s intermediate representations. This facilitates a form of distillation based on local geometric consistency between activations (i.e., intermediate representations) of teacher and student. <br />
 
-Ultimately, NAC is the core of the geometrical regularization. It is computed in two places:
+Ultimately, NAC is the core of the geometrical regularization and it is computed in two places: <br />
 a) for the teacher, serving as the ground truth signal, and <br />
 b) for the student, using the same binary neighborhood mask but different feature maps <br />
 
